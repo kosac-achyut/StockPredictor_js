@@ -1,4 +1,4 @@
-#Time series Forecasting for Stock Prices 
+# Time series Forecasting for Stock Prices 
 
 Web App              :       https://kosac-achyut.github.io/StockPredictor_js/
 Docs (About Project) :       https://kosac-achyut.github.io/StockPredictor_js/page_docs.html
