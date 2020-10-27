@@ -48,7 +48,7 @@ const CNN_build = function (data) {
 
         }));
 
-        model.add(tf.layers.dense({
+        model.add(tf.layers.dense({ // to add linearity property
             units: 1,
             kernelInitializer: 'VarianceScaling',
             activation: 'linear'
