@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+    <title>StockPrice Predictor</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.14.2/dist/tf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  
+</head>
+<body>
+    <div class="navbar-container">
+        <div class="nav-logo">
+            <li>
+                <img src="public/img/logo.png"/>StockPrice Predictor
+                <!-- <h1>Stock Prediction</h1> -->
+            </li>
+        </div>
+            <ul class="nav-link">
+                <li><a href="#home">Home</a></li>
+                <li><a href="./page_docs.html">DOCs</a></li>
+                <li><a href="#GitHub">GitHub</a></li>
+            </ul>
+    </div>
+    <div class="skewed-bg">
+        <section >
+            <div class="skewed-bg-content">
+                <h2>StockPrice Predictor v1.2</h2>
+                <p>
+                    Using the power of Convolutional Neural Network now we can predict the Stock Prices form the given Time Series Data.
+                    By using 1d Convolutional Neural Network we are able to feed sequentail data to Convolutional Network and are able to use the power and speed CNN model to predict Value to given Stock on that Day.
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="input-output-container">
+        <div class="card-container">
+            <form class="card-form">
+
+                <label for="stock_name">Chose stock to predict the value of:</label><br>
+                <select id="stock-name" name="stock_name" required>
+                    <option value="error">Select</option>
+                    <option value="msft">Microsoft</option>
+                    <option value="twtr">Twitter</option>
+                    <option value="apple">Apple</option>
+                    <option value="fb">Facebook</option>
+                    <option value="tsla">Tesla</option>
+                </select>
+                <label for="stock_time">Chose Chart time:</label><br>
+                <select id="stock-time" name="stock_time" required>
+                    <option value="error">Select</option>
+                    <option value="5y">5 year</option>
+                    <option value="2y">2 year</option>
+                    <option value="1y">1 year</option>
+                    <option value="6m">6 month</option>
+                </select>
+                <label for="optimizer">Optimization Algorithm for Model:</label><br>
+                <select id="model_optimizer" name="optimizer" required>
+                    <option value="adam">Default (Adam)</option>
+                    <option value="SGD">SGD (Stochastic Gradient descent)</option>
+                </select>
+                <label for="optimizer">Enter Epoch Value:</label><br>
+                <input id="epoch_input" type="number" required placeholder="100">
+            </form>
+            <button id="predict_button" >Predict</button>
+        </div>
+        <div class="output-container" style="display: none;">
+            <div id="linear-graph-plot">
+            </div>
+        </div>
+    </div>
+    <div class="processing-block" style="display: none;">
+        <div class="process-card" id="process-card">
+        </div>
+
+    <script src="utility.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

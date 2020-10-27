@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+   background:rgba(236, 240, 241,1.0); 
+
+  
+}
+
+
+
+/*Navbar*/
+.navbar-container{
+  position: relative;
+   display: flex; 
+   flex-direction: row;
+   border-bottom: 1px black solid;
+   justify-content: space-between;
+  background: rgba(110, 120, 122, 0.3);
+  overflow: auto;
+
+}
+.navbar-container div{
+  padding: 10px;
+}
+
+.nav-logo{
+  /* justify-items: flex-start; */
+  font-size: 1rem;
+}
+.nav-logo li{
+  list-style: none;
+  display: inline;
+}
+.nav-logo img{
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+.nav-link{
+  padding: 25px;
+  float: right;
+}
+
+.nav-link li{
+  display: inline;
+  list-style: none;
+  padding: 5px 10px 5px 10px;
+}
+
+.nav-link a{
+  text-decoration: none;
+  font-size: 18x;
+  
+  color: black;
+  line-height: 1.6;
+}
+
+.nav-link a:hover{
+  color: aliceblue;
+  text-decoration: underline;
+}
+
+/*Skewed Bg*/
+
+.skewed-bg section{
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #a49cac, #869692, #7f816d, #6d6d81);
+    background-size: 800% 800%;
+    -webkit-animation: skewed-bg 30s ease infinite;
+    -moz-animation: skewed-bg 30s ease infinite;
+    animation: skewed-bg 30s ease infinite;
+  
+}
+@keyframes skewed-bg {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+
+.skewed-bg section:before{
+
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 200px;
+  background:url(https://s32519.pcdn.co/wp-content/uploads/2020/08/machine-learning-webinar-recap-blog-hero-image.jpg.optimal.jpg);
+  clip-path: polygon(100% 0,0 100%,100% 100%);
+}
+
+.skewed-bg-content{
+  position: relative;
+  max-width: 900px;
+  text-align: center;
+}
+
+.skewed-bg-content h2{
+  margin: 0;
+  padding: 0;
+  font-size: 5em;
+  color: black;
+}
+
+.skewed-bg-content p{
+  font-size: 1em;
+  color: black;
+}
+
+/*Card for input*/
+
+.input-output-container{
+  margin-top: 200px;
+  margin-bottom: 100px;
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  align-items: flex-start;
+  /* padding-left: 10px; */
+}
+.card-container{
+  justify-items: center;
+  flex-basis:1;
+  padding: 50px 30px 50px 30px;
+  background: rgba(194, 198, 199, 0.3);
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  transition: 0.3s;
+  border-radius:4px ;
+}
+.card-container:hover{
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,0.4);
+}
+
+.card-form  select ,.card-form  input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius:4px ;
+}
+
+
+.card-form label{
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  padding-bottom: 5px;
+
+}
+
+.card-form select{
+  font-size: 14px;
+}
+
+.card-container button{
+
+  text-decoration: none;
+  background-color: #f4511e;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.card-container button:hover {opacity: 1;transform: scale(1.1);}
+
+.output-container{
+  flex-basis: 1;
+}
+#linear-graph-plot
+{
+  border: 6px solid white;
+  background: white;
+  border-radius:10px ;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+}
+
+#linear-graph-plot:hover{
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.4);
+  transform: scale(1.05);
+}
+
+
+
+.processing-block{
+  display: flex;
+  justify-content: center;
+}
+.process-card{
+  border:1px black solid;
+  width: 90%;
+  background:rgba(194, 198, 199, 0.3) ;
+  color: black;
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+}
