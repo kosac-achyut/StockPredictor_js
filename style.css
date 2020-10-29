@@ -15,8 +15,6 @@ body{
   
 }
 
-
-
 /*Navbar*/
 .navbar-container{
   position: relative;
@@ -26,6 +24,7 @@ body{
    justify-content: space-between;
   background: rgba(110, 120, 122, 0.3);
   overflow: auto;
+  min-width: 600px;
 
 }
 .navbar-container div{
@@ -69,11 +68,22 @@ body{
   text-decoration: underline;
 }
 
+@media all and (max-width:600px)
+{
+ 
+  .navbar-container{
+    
+    background: rgba(69, 119, 129, 0.3);
+  
+  }
+
+}
 /*Skewed Bg*/
 
 .skewed-bg section{
   position: relative;
   width: 100%;
+  min-width: 550px;
   height: 90vh;
   display: flex;
   justify-content: center;
@@ -100,20 +110,20 @@ body{
   left:0;
   width: 100%;
   height: 200px;
-  background:url(https://s32519.pcdn.co/wp-content/uploads/2020/08/machine-learning-webinar-recap-blog-hero-image.jpg.optimal.jpg);
+  background:url(./public/img/bg.jpg);
   clip-path: polygon(100% 0,0 100%,100% 100%);
 }
 
 .skewed-bg-content{
   position: relative;
-  max-width: 900px;
+  min-width: 600px;
   text-align: center;
 }
 
 .skewed-bg-content h2{
   margin: 0;
   padding: 0;
-  font-size: 5em;
+  font-size: 4.5em;
   color: black;
 }
 
@@ -122,15 +132,28 @@ body{
   color: black;
 }
 
+@media all and (max-width:600px)
+{
+  .skewed-bg-content h2{
+    font-size: 3.5em;
+  }
+  .skewed-bg-content p{
+    font-size: 0.8em;
+  }
+}
+
 /*Card for input*/
 
 .input-output-container{
   margin-top: 200px;
   margin-bottom: 100px;
   width: 100%;
+
+  
   /* height: 100vh; */
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
   justify-content: space-around;
   align-items: flex-start;
   /* padding-left: 10px; */
@@ -144,6 +167,7 @@ body{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   transition: 0.3s;
   border-radius:4px ;
+  min-width: 400px;
 }
 .card-container:hover{
   box-shadow: 0 8px 20px 0 rgba(0,0,0,0.4);
@@ -187,21 +211,55 @@ body{
 }
 .card-container button:hover {opacity: 1;transform: scale(1.1);}
 
+
+
 .output-container{
   flex-basis: 1;
 }
 #linear-graph-plot
 {
+  /* display: flex; */
+  width: 100%;
   border: 6px solid white;
   background: white;
   border-radius:10px ;
   transition: 0.3s;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+  margin-bottom: 20px;
+  min-width: 450px;
+
+
 }
+
+/* .output-container div{
+  width: 100%;
+} */
 
 #linear-graph-plot:hover{
   box-shadow: 0 16px 32px 0 rgba(0,0,0,0.4);
   transform: scale(1.05);
+}
+
+@media all and (max-width:600px){
+
+  .input-output-container{
+    margin-top: 100px;
+  margin-bottom: 50px;
+  }
+
+  .card-container{
+    width: 50%;
+  }
+  .card-form label{
+    font-size: 16px;
+
+  }
+  .card-form  select ,.card-form  input{
+    padding: 6px 10px;
+  }
+
+  
+
 }
 
 
