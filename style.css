@@ -130,6 +130,7 @@ body{
 .skewed-bg-content p{
   font-size: 1em;
   color: black;
+  margin: 10px 5px 10px 5px ;
 }
 
 @media all and (max-width:600px)
