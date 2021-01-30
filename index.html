@@ -14,6 +14,9 @@
   
 </head>
 <body>
+    <script>
+        alert("This is a Demo version which only show Time Series Forecast of Twitter Stock ")
+    </script>
     <div class="navbar-container">
         <div class="nav-logo">
             <li>
@@ -45,18 +48,18 @@
                 <label for="stock_name">Chose stock to predict the value of:</label><br>
                 <select id="stock-name" name="stock_name" required>
                     <option value="error">Select</option>
-                    <option value="msft">Microsoft</option>
+                    <option value="msft" disabled>Microsoft</option>
                     <option value="twtr">Twitter</option>
-                    <option value="apple">Apple</option>
-                    <option value="fb">Facebook</option>
-                    <option value="tsla">Tesla</option>
+                    <option value="apple" disabled>Apple</option>
+                    <option value="fb" disabled>Facebook</option>
+                    <option value="tsla" disabled>Tesla</option>
                 </select>
                 <label for="stock_time">Chose Chart time:</label><br>
                 <select id="stock-time" name="stock_time" required>
                     <option value="error">Select</option>
-                    <option value="5y">5 year</option>
-                    <option value="2y">2 year</option>
-                    <option value="1y">1 year</option>
+                    <option value="5y" disabled>5 year</option>
+                    <option value="2y" disabled>2 year</option>
+                    <option value="1y" disabled>1 year</option>
                     <option value="6m">6 month</option>
                 </select>
                 <label for="optimizer">Optimization Algorithm for Model:</label><br>

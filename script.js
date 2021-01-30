@@ -79,7 +79,7 @@ const cnn = function (model, data, epochs, model_optimizer) {
                 }*/
                 print("Finished ∆∆∆∆");
                 print("","br");
-                print("Loss after last Epoch (" + result.epoch.length + ") is: " + result.history.loss[result.epoch.length-1]);
+               // print("Loss after last Epoch (" + result.epoch.length + ") is: " + result.history.loss[result.epoch.length-1]);
                 resolve(model);
             })
         }
@@ -122,7 +122,7 @@ $(document).ready(function () {
 
             let labels = data.map(function (val) {return val['date'];});
             //console.log(labels);
-            print("Getting Data for Stock : "+symbol);
+            print("Getting Data for Stock : "+Twitter);
             print("","br");
             print("Optimization Algorithm : "+model_optimizer);
             dataFeaturing(data, timePortion).then(function (result){
@@ -182,7 +182,7 @@ $(document).ready(function () {
                             });
 
                             // Print the predicted stock price value for the next day
-                            print("Predicted Stock Price of " + symbol + " for date " + moment(P_date).format("DD-MM-YYYY") + " is: " + predictedValue_rev.data[0].toFixed(3) + "$");
+                            print("Predicted Stock Price of " + Twitter + " for date " + moment(P_date).format("DD-MM-YYYY") + " is: " + predictedValue_rev.data[0].toFixed(3) + "$");
                             let end = performance.now();
                             let result = parseFloat((end - start)/1000);
 
