@@ -278,3 +278,27 @@ body{
   margin-bottom: 50px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
 }
+
+.content-main
+{
+  background-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  justify-self:center;
+  width: 80%;
+  height: auto;
+  text-align: center;
+}
+
+.content-main h2{
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content-main p{
+  font-size: 25px;
+  text-align: center;
+}
